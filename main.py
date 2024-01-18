@@ -62,10 +62,23 @@ async def transcribe(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
     # Transcribe the audio file
     result = model.transcribe(file_path)
-    print(result["text"])
+    # print(result["text"]) --> Privacy first
     await context.bot.send_message(
         chat_id=update.effective_chat.id, text=result["text"]
     )
+    try:
+        os.remove(file_path)
+        print(f"Successfully deleted file: {file_path}")
+        await context.bot.send_message(
+            chat_id=update.effective_chat.id,
+            text="Successfully deleted voice message from server!",
+        )
+    except OSError as e:
+        print(f"Error: {file_path} : {e.strerror}")
+        await context.bot.send_message(
+            chat_id=update.effective_chat.id,
+            text="Error while deleting the voice message from server - your file is still there! Contact the admin.",
+        )
 
 
 if __name__ == "__main__":
