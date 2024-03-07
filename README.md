@@ -1,8 +1,13 @@
 # Telegram Transcription Bot
 
+## ⚠️ Disclaimer
+
+Although I always keep your and my own privacy in mind while developing software, I offer this experimental service for free to anybody who would like to use it, but I do not guarantee anything, including your privacy.
+Use this bot at your own risk!
+
 ## Description
 
-This bot uses [OpenAI's whisper](https://github.com/openai/whisper) and [Python Telegram Bot](https://github.com/python-telegram-bot/python-telegram-bot) to transcribe your voice messages and audio files from Telegram and other messengers like WhatsApp. You can just send the voice message to your Telegram-Bot and it responds with the containing text.
+This bot uses [OpenAI's whisper](https://github.com/openai/whisper) and [Python Telegram Bot](https://github.com/python-telegram-bot/python-telegram-bot) to transcribe your voice messages, video messages and even raw audio and video files from Telegram and other messengers like WhatsApp or Signal. You can just send the message to your Telegram-Bot and it responds with the containing text.
 
 ## Installation
 
