@@ -48,7 +48,6 @@ async def echo(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
 async def transcribe(update: Update, context: ContextTypes.DEFAULT_TYPE):
     print("Received message")
-    print(update)
     await context.bot.send_message(
         chat_id=update.effective_chat.id,
         text="Received message, transcription running...",
