@@ -1,0 +1,7 @@
+.env
+bin
+include
+lib
+share
+pyvenv.cfg
+voice.ogg
